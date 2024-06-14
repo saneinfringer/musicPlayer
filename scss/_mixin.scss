@@ -1,0 +1,13 @@
+@mixin flexboxCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin RightLeftRadii($topRight, $bottomRight, $topLeft, $bottomLeft){
+    border-top-right-radius:$topRight ;
+    border-bottom-right-radius:$bottomRight ;
+    border-top-left-radius:$topLeft ;
+    border-bottom-left-radius:$bottomLeft ;
+}

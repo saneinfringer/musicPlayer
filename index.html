@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Music Player</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="PlayerContainer">
+        <div class="WrapperPlayer">
+            <div class="ImageContainer">
+                <img src="assets/img-1.jpg" alt="">
+                <img src="assets/img-2.jpg" alt="">
+                <img src="assets/img-3.jpg" alt="">
+            </div>
+            <div class="InfoContainer">
+                <h2 id="songName">Song Name</h2>
+                <p id="Artist">Singer Name</p>
+            </div>
+            <div class="SeekBar">
+                <div class="progress"></div>
+            </div>
+            <div class="ControlWrapper">
+                <div class="replay"><i class="fa-solid fa-rotate-right"></i><div class="replay-txt">replay</div></div>
+                <svg class="backward controller" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path fill="#040f16"
+                        d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241V96c0-17.7-14.3-32-32-32S0 78.3 0 96V416c0 17.7 14.3 32 32 32s32-14.3 32-32V271l11.5 9.6 192 160z" />
+                </svg>
+                <div class="PlayAndPause" id="PlayAndPause">
+                    <svg class="play controller" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#040f16"
+                            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z" />
+                    </svg>
+                    <!-- <"pauseBtn"> -->
+                    <svg class="pause controller" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#040f16"
+                            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm224-72V328c0 13.3-10.7 24-24 24s-24-10.7-24-24V184c0-13.3 10.7-24 24-24s24 10.7 24 24zm112 0V328c0 13.3-10.7 24-24 24s-24-10.7-24-24V184c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
+                    </svg>
+                </div>
+                <svg class="forward controller" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path fill="#040f16"
+                        d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241V96c0-17.7 14.3-32 32-32s32 14.3 32 32V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V271l-11.5 9.6-192 160z" />
+                </svg>
+                <i class="fa-solid fa-repeat"><div class="repeat">repeat</div></i>
+            </div>
+            <div class="volume">
+                <i class="fa-solid fa-volume-high"><div class="volume">volume</div></i>
+                <div id="input">
+                    <input type="range" name="volume" min="0" max="100" value="50">
+                    <progress min="0" max="100" value="50"></progress>
+                </div>
+                <span class="volumeValue">50</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

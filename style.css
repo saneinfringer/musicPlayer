@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.PlayerContainer {
+  height: 100vh;
+  width: 100vw;
+  transition: all 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+}
+.PlayerContainer .WrapperPlayer {
+  height: 35rem;
+  width: 20rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.PlayerContainer .WrapperPlayer .volume {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+}
+.PlayerContainer .WrapperPlayer .volume #input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 0.3rem;
+  width: 6rem;
+}
+.PlayerContainer .WrapperPlayer .volume #input input {
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: 99;
+  height: 0.3rem;
+  width: 6rem;
+  background-color: transparent;
+}
+.PlayerContainer .WrapperPlayer .volume #input input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #0dc4f7;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+.PlayerContainer .WrapperPlayer .volume #input progress {
+  position: absolute;
+  -webkit-appearance: none;
+  height: 0.3rem;
+  width: 6rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  overflow: hidden;
+}
+.PlayerContainer .WrapperPlayer .volume #input progress::-webkit-progress-bar {
+  background-color: #FBFBFF;
+}
+.PlayerContainer .WrapperPlayer .volume #input progress::-webkit-progress-value {
+  background-color: #0B4F6C;
+}
+.PlayerContainer .WrapperPlayer .volume span {
+  color: #FBFBFF;
+  background-color: #0B4F6C;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.PlayerContainer .WrapperPlayer .volume .fa-volume-high, .PlayerContainer .WrapperPlayer .volume .fa-volume-xmark {
+  cursor: pointer;
+  position: relative;
+  color: #040f16;
+}
+.PlayerContainer .WrapperPlayer .volume .fa-volume-high .volume, .PlayerContainer .WrapperPlayer .volume .fa-volume-xmark .volume {
+  color: #FBFBFF;
+  font-size: 0.8em;
+  border-radius: 2px;
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  display: none;
+}
+.PlayerContainer .WrapperPlayer .volume .fa-volume-high:hover .volume, .PlayerContainer .WrapperPlayer .volume .fa-volume-xmark:hover .volume {
+  display: inline;
+  opacity: 0.5;
+}
+.PlayerContainer .ImageContainer {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 0.3rem;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 40px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.PlayerContainer .ImageContainer img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.3rem;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 40px;
+}
+.PlayerContainer .InfoContainer h2 {
+  font-size: 1.5rem;
+  color: #FBFBFF;
+}
+.PlayerContainer .InfoContainer p {
+  color: #FBFBFF;
+}
+.PlayerContainer .SeekBar {
+  height: 0.3rem;
+  width: 12rem;
+  background-color: #FBFBFF;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.3s ease;
+}
+.PlayerContainer .SeekBar:hover:hover ::after {
+  transform: scale(1.3);
+}
+.PlayerContainer .SeekBar .progress {
+  position: relative;
+  height: 100%;
+  width: 0%;
+  z-index: 1;
+  background-color: #0B4F6C;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.2s ease;
+}
+.PlayerContainer .SeekBar .progress::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #0dc4f7;
+  border-radius: 50%;
+  right: -6px;
+  bottom: -2px;
+  transition: all 0.2s ease;
+}
+.PlayerContainer .SeekBar .progress:hover::after {
+  transform: scale(1.3);
+}
+.PlayerContainer .ControlWrapper {
+  display: flex;
+  gap: 2rem;
+}
+.PlayerContainer .ControlWrapper .controller {
+  height: 2rem;
+  cursor: pointer;
+}
+.PlayerContainer .ControlWrapper #PlayAndPause {
+  position: relative;
+  padding-right: 30px;
+}
+.PlayerContainer .ControlWrapper #PlayAndPause .controller {
+  position: absolute;
+}
+.PlayerContainer .ControlWrapper #PlayAndPause .pause {
+  display: none;
+}
+.PlayerContainer .ControlWrapper .fa-repeat {
+  cursor: pointer;
+  position: relative;
+  color: #040f16;
+}
+.PlayerContainer .ControlWrapper .fa-repeat .repeat {
+  color: #FBFBFF;
+  font-size: 0.8em;
+  border-radius: 2px;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  display: none;
+}
+.PlayerContainer .ControlWrapper .fa-repeat:hover .repeat {
+  display: inline;
+  opacity: 0.5;
+}
+.PlayerContainer .ControlWrapper .replay {
+  cursor: pointer;
+  position: relative;
+  color: #040f16;
+}
+.PlayerContainer .ControlWrapper .replay .replay-txt {
+  color: #FBFBFF;
+  font-size: 0.8em;
+  border-radius: 2px;
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  display: none;
+}
+.PlayerContainer .ControlWrapper .replay:hover .replay-txt {
+  display: inline;
+  opacity: 0.5;
+}

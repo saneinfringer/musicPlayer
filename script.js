@@ -122,9 +122,6 @@ document.addEventListener('keyup', function (event) {
     else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         vol.oninput();
     }
-    else if (event.keyCode === "77") {
-
-    }
 });
 //keyboard functionality end
 const repeat = document.querySelector(".fa-repeat");

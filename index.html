@@ -53,13 +53,30 @@
             <div class="volume">
                 <i class="fa-solid fa-volume-high"><div class="volume">volume</div></i>
                 <div id="input">
-                    <input type="range" name="volume" min="0" max="100" value="50">
+                    <input title="volume" type="range" name="volume" min="0" max="100" value="50">
                     <progress min="0" max="100" value="50"></progress>
                 </div>
                 <span class="volumeValue">50</span>
             </div>
         </div>
+
+        <!-- playlistContainer -->
+    <div class="playlistContainer">
+        <div class="playlistWrapper">
+            <h2>Playlist</h2>
+            <ul class="playlist">
+                <li class="active">Song 1</li>
+            </ul>
+        </div>
     </div>
+    <div class="add_song">
+        <input id="songTitleInput" placeholder="Song Title">
+        <input id="songArtistInput" placeholder="Artist">
+        <input title="deviceSongAdd" type="file" id="songFileInput" accept="audio/*">
+        <input id="songImageInput" placeholder="Image Filename (e.g. img-7.jpg)">
+        <button id="addSongBtn">Add Song</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 
